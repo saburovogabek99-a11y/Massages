@@ -25,7 +25,7 @@ jobs:
             -alias androiddebugkey -keyalg RSA -keysize 2048 \
             -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
       - name: Create .env
-        run: echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" > .env
+        run: echo "GEMINI_API_KEY=test" > .env
       - run: gradle assembleDebug
       - uses: actions/upload-artifact@v4
         with:
